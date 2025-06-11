@@ -25,7 +25,6 @@ const Navigation = () => {
     { label: 'Learning', href: '/learning' },
     { label: 'Featured', href: '/featured' },
     { label: 'Tech Stack', href: '/tech-stack' },
-    { label: 'Timeline', href: '/timeline' },
     { label: 'Certifications', href: '/certifications' },
   ];
 

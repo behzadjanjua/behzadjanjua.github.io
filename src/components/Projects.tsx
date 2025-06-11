@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
@@ -16,14 +15,7 @@ const Projects = () => {
       description: "Complete redesign and development of university department website with modern UI/UX principles.",
       tags: ["React", "TypeScript", "Tailwind CSS", "Figma"],
       github: "https://github.com",
-      demo: "https://demo.com",
-      featured: true
-    },
-    {
-      title: "E-commerce Platform",
-      description: "Full-stack e-commerce solution with payment integration and admin dashboard.",
-      tags: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com"
+      demo: "https://demo.com"
     }
   ];
 
@@ -32,18 +24,6 @@ const Projects = () => {
       title: "Java Drone Control System",
       description: "Object-oriented drone simulation with autonomous navigation and collision detection algorithms.",
       tags: ["Java", "OOP", "Algorithms", "JUnit"],
-      github: "https://github.com"
-    },
-    {
-      title: "Python ML Stock Predictor",
-      description: "Machine learning model for stock price prediction using historical data and sentiment analysis.",
-      tags: ["Python", "Scikit-learn", "Pandas", "TensorFlow"],
-      github: "https://github.com"
-    },
-    {
-      title: "C++ Data Structures Library",
-      description: "Custom implementation of fundamental data structures with comprehensive testing suite.",
-      tags: ["C++", "Data Structures", "Testing", "Documentation"],
       github: "https://github.com"
     }
   ];
@@ -93,9 +73,7 @@ const Projects = () => {
           {currentProjects.map((project, index) => (
             <Card 
               key={project.title} 
-              className={`hover-lift group cursor-pointer border-border/50 hover:border-portfolio-primary/50 transition-all duration-300 ${
-                project.featured ? 'md:col-span-2 lg:col-span-3' : ''
-              }`}
+              className="hover-lift group cursor-pointer border-border/50 hover:border-portfolio-primary/50 transition-all duration-300"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <CardHeader>
