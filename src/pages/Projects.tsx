@@ -13,11 +13,10 @@ const Projects = () => {
   const generalProjects = [
     {
       title: "McMaster Parking Services Website Revamp",
-      description: "Complete redesign and modernization of McMaster's Parking Services site. Led a team of 4, improved accessibility for 30,000+ users, and boosted traffic by 35%.",
+      description: "Modernized McMaster’s Parking Services website, improving accessibility for over 30,000 users and achieving full AODA compliance. Enhanced workflow efficiency for staff by 60% through redesigned user flows and targeted UI improvements.",
       tags: ["React", "TypeScript", "Accessibility", "Team Leadership"],
-      github: "https://github.com",
-      demo: "https://demo.com"
-    }
+      // github: "https://github.com",
+      demo: "https://parking.mcmaster.ca"}
   ];
 
   const schoolProjects = [

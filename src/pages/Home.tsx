@@ -25,7 +25,7 @@ const Home = () => {
               size="lg" 
               className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
               onClick={() => {
-                window.open('/Behzad_Janjua_Resume.pdf', '_blank');
+                window.open('/BehzadJanjua_Resume.pdf', '_blank');
               }}
             >
               <Download className="mr-2 h-5 w-5" />

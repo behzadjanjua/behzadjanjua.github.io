@@ -10,7 +10,7 @@ const LearningLogs = () => {
   const learningEntries = [
     {
       title: "HarvardX Data Science & Machine Learning (CS109x/CS109xa)",
-      date: "2024",
+      date: "2025",
       summary: "Reflections on HarvardX course track covering data wrangling, ML pipelines, and Python workflows. Applying knowledge to portfolio projects and real-world data science challenges.",
       tags: ["Data Science", "Machine Learning", "Python", "HarvardX"]
     }
