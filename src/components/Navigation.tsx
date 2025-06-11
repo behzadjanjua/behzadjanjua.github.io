@@ -3,11 +3,13 @@ import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,20 +20,14 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Learning', href: '#learning' },
-    { label: 'Blog', href: '#blog' },
-    { label: 'Certifications', href: '#certifications' },
+    { label: 'Home', href: '/' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Learning', href: '/learning' },
+    { label: 'Featured', href: '/featured' },
+    { label: 'Tech Stack', href: '/tech-stack' },
+    { label: 'Timeline', href: '/timeline' },
+    { label: 'Certifications', href: '/certifications' },
   ];
-
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -40,21 +36,27 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <span className="text-xl font-bold gradient-text">BJ</span>
+            <Link to="/" className="text-xl font-bold gradient-text">
+              Behzad Janjua
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-foreground hover:text-portfolio-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group"
+                  to={item.href}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group ${
+                    location.pathname === item.href 
+                      ? 'text-portfolio-primary' 
+                      : 'text-foreground hover:text-portfolio-primary'
+                  }`}
                 >
                   {item.label}
                   <span className="absolute inset-x-0 bottom-0 h-0.5 bg-portfolio-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
-                </button>
+                </Link>
               ))}
             </div>
           </div>
@@ -96,13 +98,18 @@ const Navigation = () => {
           <div className="md:hidden animate-slide-down">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md rounded-lg mt-2">
               {navItems.map((item) => (
-                <button
+                <Link
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
-                  className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-portfolio-primary hover:bg-accent transition-colors duration-200 w-full text-left"
+                  to={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 w-full text-left ${
+                    location.pathname === item.href 
+                      ? 'text-portfolio-primary bg-accent' 
+                      : 'text-foreground hover:text-portfolio-primary hover:bg-accent'
+                  }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
