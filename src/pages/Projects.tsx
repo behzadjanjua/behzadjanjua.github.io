@@ -24,25 +24,25 @@ const Projects = () => {
       title: "Java Drone Rescue System",
       description: "Modular Java app for drone-based search and rescue. Applied SOLID & GRASP principles with JUnit-tested logic, GitHub Actions CI, and JSON-based command interface.",
       tags: ["Java", "SOLID Principles", "JUnit", "GitHub Actions"],
-      github: "https://github.com"
+      github: "https://github.com/benbloomie/2aa4-assignment2-team09"
     },
     {
       title: "Python ML Student Grade Predictor",
       description: "Used UCI dataset to predict pass/fail outcomes. Trained Decision Trees and Logistic Regression, achieved ~89% test accuracy with confusion matrix visualization.",
       tags: ["Python", "Machine Learning", "Scikit-learn", "Data Visualization"],
-      github: "https://github.com"
+      github: "https://github.com/behzadjanjua/student-grade-predictor"
     },
     {
       title: "C & GTK Scientific Calculator",
       description: "Modular scientific calculator with GTK GUI. Used BEDMAS parsing rules and built collaboratively with Git-based team workflow.",
       tags: ["C", "GTK", "GUI Development", "Git Collaboration"],
-      github: "https://github.com"
+      github: "https://github.com/Sam-Scott-McMaster/the-team-assignment-team-17-method-men"
     },
     {
       title: "Java Maze Runner (SOLID + GoF)",
       description: "Maze navigation using clean abstractions (Maze, Player, Pathfinder). Applied SOLID and GoF principles with Apache CLI and Log4J. Built iteratively via MVP.",
       tags: ["Java", "Design Patterns", "Apache CLI", "Log4J"],
-      github: "https://github.com"
+      github: "https://github.com/behzadjanjua/Maze-Runner"
     }
   ];
 
