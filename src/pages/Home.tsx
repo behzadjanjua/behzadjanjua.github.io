@@ -37,7 +37,7 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="rounded-full p-3 hover:bg-accent transition-all duration-300 hover:scale-110"
-                onClick={() => window.open('https://github.com/behzadjanjua', '_blank')}
+                onClick={() => window.open('https://github.com', '_blank')}
               >
                 <Github className="h-6 w-6" />
               </Button>
@@ -45,7 +45,7 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="rounded-full p-3 hover:bg-accent transition-all duration-300 hover:scale-110"
-                onClick={() => window.open('https://www.linkedin.com/in/behzad-janjua/', '_blank')}
+                onClick={() => window.open('https://linkedin.com', '_blank')}
               >
                 <Linkedin className="h-6 w-6" />
               </Button>
