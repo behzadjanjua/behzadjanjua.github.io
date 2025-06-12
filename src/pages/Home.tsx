@@ -16,13 +16,13 @@ const Home = () => {
             <span className="gradient-text">Behzad Janjua</span>
           </h1>
           <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Software Engineering Student crafting thoughtful solutions and 
+            Software Engineering Student crafting thoughtful solutions and
             sharing my journey through code and learning.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-portfolio-primary hover:bg-portfolio-primary/90 text-primary-foreground px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg"
               onClick={() => {
                 window.open('/BehzadJanjua_Resume.pdf', '_blank');
@@ -31,13 +31,13 @@ const Home = () => {
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </Button>
-            
+
             <div className="flex space-x-4">
               <Button
                 variant="outline"
                 size="lg"
                 className="rounded-full p-3 hover:bg-accent transition-all duration-300 hover:scale-110"
-                onClick={() => window.open('https://github.com', '_blank')}
+                onClick={() => window.open('https://github.com/behzadjanjua', '_blank')}
               >
                 <Github className="h-6 w-6" />
               </Button>
@@ -55,7 +55,7 @@ const Home = () => {
           <div className="relative">
             <div className="cozy-card p-8 max-w-2xl mx-auto">
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Currently exploring the intersection of technology and creativity, 
+                Currently exploring the intersection of technology and creativity,
                 building projects that solve real problems while documenting my growth as a developer.
                 I believe in clean code, thoughtful design, and continuous learning.
               </p>
