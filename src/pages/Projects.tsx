@@ -16,7 +16,25 @@ const Projects = () => {
       description: "Modernized McMaster’s Parking Services website, improving accessibility for over 30,000 users and achieving full AODA compliance. Enhanced workflow efficiency for staff by 60% through redesigned user flows and targeted UI improvements.",
       tags: ["React", "TypeScript", "Accessibility", "Team Leadership"],
       // github: "https://github.com",
-      demo: "https://parking.mcmaster.ca"}
+      demo: "https://parking.mcmaster.ca"
+    },
+
+    {
+      title: "Hamilton Sustainability Action Project (HSAP)",
+      description:
+        "Co-led the design and development of the HSAP website, ensuring accessibility and clarity for students and community partners. HSAP is a student-driven initiative that connects McMaster volunteers with local environmental organizations to support sustainability-focused events, including native tree planting and nonprofit collaboration.",
+      tags: ["UX Research", "Web Design", "Sustainability", "Community Engagement"],
+      demo: "https://hamiltonsustainabilityactionproject.wordpress.com"
+    },
+
+    {
+      title: "Personal Portfolio Website",
+      description:
+        "You're looking at it! I built this site as a personal space to share my work, reflect on what I'm learning, and highlight the things I'm building along the way. It's built with React, TypeScript, and Tailwind CSS, with some smooth animations and thoughtful design choices throughout.",
+      tags: ["React", "TypeScript", "Tailwind CSS", "GitHub Pages"],
+      demo: "https://behzadjanjua.github.io",
+      github: "https://github.com/behzadjanjua/behzadjanjua.github.io"
+    }
   ];
 
   const schoolProjects = [
@@ -63,22 +81,20 @@ const Projects = () => {
           <div className="cozy-card p-1">
             <Button
               variant={activeTab === 'general' ? 'default' : 'ghost'}
-              className={`rounded-full px-6 py-2 transition-all duration-300 ${
-                activeTab === 'general' 
-                  ? 'bg-portfolio-primary text-primary-foreground shadow-lg' 
-                  : 'hover:bg-accent'
-              }`}
+              className={`rounded-full px-6 py-2 transition-all duration-300 ${activeTab === 'general'
+                ? 'bg-portfolio-primary text-primary-foreground shadow-lg'
+                : 'hover:bg-accent'
+                }`}
               onClick={() => setActiveTab('general')}
             >
               General Projects
             </Button>
             <Button
               variant={activeTab === 'school' ? 'default' : 'ghost'}
-              className={`rounded-full px-6 py-2 transition-all duration-300 ${
-                activeTab === 'school' 
-                  ? 'bg-portfolio-primary text-primary-foreground shadow-lg' 
-                  : 'hover:bg-accent'
-              }`}
+              className={`rounded-full px-6 py-2 transition-all duration-300 ${activeTab === 'school'
+                ? 'bg-portfolio-primary text-primary-foreground shadow-lg'
+                : 'hover:bg-accent'
+                }`}
               onClick={() => setActiveTab('school')}
             >
               School Projects
@@ -89,8 +105,8 @@ const Projects = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {currentProjects.map((project, index) => (
-            <Card 
-              key={project.title} 
+            <Card
+              key={project.title}
               className="hover-lift cozy-card"
               style={{ animationDelay: `${index * 100}ms` }}
             >
@@ -135,9 +151,9 @@ const Projects = () => {
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <Badge 
-                      key={tag} 
-                      variant="secondary" 
+                    <Badge
+                      key={tag}
+                      variant="secondary"
                       className="text-xs bg-portfolio-primary/10 text-portfolio-primary border-portfolio-primary/20 hover:bg-portfolio-primary/20 transition-colors duration-300"
                     >
                       {tag}
