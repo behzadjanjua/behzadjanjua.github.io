@@ -32,7 +32,6 @@ const Projects = () => {
       description:
         "You're looking at it! I built this site as a personal space to share my work, reflect on what I'm learning, and highlight the things I'm building along the way. It's built with React, TypeScript, and Tailwind CSS, with some smooth animations and thoughtful design choices throughout.",
       tags: ["React", "TypeScript", "Tailwind CSS", "GitHub Pages"],
-      demo: "https://behzadjanjua.github.io",
       github: "https://github.com/behzadjanjua/behzadjanjua.github.io"
     }
   ];

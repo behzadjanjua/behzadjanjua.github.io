@@ -10,7 +10,6 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import LearningLogs from "./pages/LearningLogs";
 import Featured from "./pages/Featured";
-import TechStack from "./pages/TechStack";
 import Certifications from "./pages/Certifications";
 import NotFound from "./pages/NotFound";
 
@@ -31,7 +30,6 @@ const App = () => (
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/learning" element={<LearningLogs />} />
                 <Route path="/featured" element={<Featured />} />
-                <Route path="/tech-stack" element={<TechStack />} />
                 <Route path="/certifications" element={<Certifications />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>

@@ -7,7 +7,6 @@ import Projects from '../components/Projects';
 import LearningLogs from '../components/LearningLogs';
 import Blog from '../components/Blog';
 import Certifications from '../components/Certifications';
-import TechStack from '../components/TechStack';
 
 const Index = () => {
   return (
@@ -20,7 +19,6 @@ const Index = () => {
           <LearningLogs />
           <Blog />
           <Certifications />
-          <TechStack />
         </main>
       </div>
     </ThemeProvider>
