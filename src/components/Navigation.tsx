@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from './ui/button';
 import { Sun, Moon, Menu, X } from 'lucide-react';
@@ -28,29 +27,27 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-background/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0">
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="flex justify-between items-center h-16 relative">
+          <div className="flex-shrink-0 z-10">
             <Link to="/" className="text-xl font-bold gradient-text">
               Behzad Janjua
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="flex items-baseline space-x-4">
               {navItems.map((item) => (
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group ${
-                    location.pathname === item.href 
-                      ? 'text-portfolio-primary' 
-                      : 'text-foreground hover:text-portfolio-primary'
-                  }`}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 relative group ${location.pathname === item.href
+                    ? 'text-portfolio-primary'
+                    : 'text-foreground hover:text-portfolio-primary'
+                    }`}
                 >
                   {item.label}
                   <span className="absolute inset-x-0 bottom-0 h-0.5 bg-portfolio-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
@@ -59,7 +56,7 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 z-10">
             <Button
               variant="ghost"
               size="sm"
@@ -100,11 +97,10 @@ const Navigation = () => {
                   key={item.label}
                   to={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 w-full text-left ${
-                    location.pathname === item.href 
-                      ? 'text-portfolio-primary bg-accent' 
-                      : 'text-foreground hover:text-portfolio-primary hover:bg-accent'
-                  }`}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 w-full text-left ${location.pathname === item.href
+                    ? 'text-portfolio-primary bg-accent'
+                    : 'text-foreground hover:text-portfolio-primary hover:bg-accent'
+                    }`}
                 >
                   {item.label}
                 </Link>
